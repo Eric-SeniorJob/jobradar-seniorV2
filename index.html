@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JobRadar Senior</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand"><div class="logo">JR</div><div><h1>JobRadar Senior</h1><small>Votre radar personnel d'opportunités</small></div></div>
+<div class="head-actions"><span id="savedCount">0 suivie</span><button id="reset">Réinitialiser</button></div></header>
+<main>
+<section class="intro"><div><span class="eyebrow">RECHERCHE PERSONNALISÉE</span><h2>Les postes qui méritent votre attention.</h2><p>GRC, gouvernance cyber, RSSI/CISO et gouvernance IA — avec une forte pondération sur le pilotage et une exclusion des postes trop techniques.</p></div></section>
+<section class="panel">
+<div class="section-title"><h3>Mes critères</h3><span class="demo">Données de démonstration</span></div>
+<div class="filters">
+<label>Fonction<select id="role"><option value="all">Toutes</option><option value="grc">GRC / Gouvernance</option><option value="rssi">RSSI / CISO</option><option value="risk">Risk / Compliance</option><option value="ia">Gouvernance IA</option><option value="dpo">DPO / Privacy</option></select></label>
+<label>Zone<select id="zone"><option value="all">PACA + télétravail</option><option value="sophia">Sophia Antipolis</option><option value="toulon">Toulon / Ollioules</option><option value="aix">Aix / Marseille</option><option value="remote">Télétravail</option></select></label>
+<label>Contrat<select id="contract"><option value="all">CDI ou freelance</option><option value="cdi">CDI</option><option value="freelance">Freelance / portage</option></select></label>
+<label>TJM minimum<input id="tjm" type="number" value="650" step="25"></label>
+</div>
+<label class="switch"><input id="technical" type="checkbox" checked> Exclure les postes trop techniques</label>
+</section>
+<div class="summary"><div><strong id="resultCount">0</strong> offres retenues · <strong id="highCount">0</strong> très compatibles</div><select id="sort"><option value="score">Trier par pertinence</option><option value="date">Plus récentes</option><option value="pay">Rémunération</option></select></div>
+<section id="jobs"></section>
+<section class="panel methodology"><h3>Comment JobRadar calcule le score</h3><div class="method-grid"><div><b>Gouvernance / GRC</b><span>fortement pondéré</span></div><div><b>Seniorité</b><span>expérience et responsabilité</span></div><div><b>Localisation</b><span>PACA + remote</span></div><div><b>Technicité</b><span>pénalité forte si dominante</span></div></div></section>
+</main><footer>JobRadar Senior · Prototype personnel · Les offres affichées sont fictives.</footer>
+<script src="app.js"></script>
+</body></html>
