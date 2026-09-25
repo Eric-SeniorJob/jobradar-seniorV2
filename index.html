@@ -1,27 +1,10 @@
-<!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>JobRadar Senior</title><link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header><div class="brand"><div class="logo">JR</div><div><h1>JobRadar Senior</h1><small>Votre radar personnel d'opportunités</small></div></div>
-<div class="head-actions"><span id="savedCount">0 suivie</span><button id="reset">Réinitialiser</button></div></header>
-<main>
-<section class="intro"><div><span class="eyebrow">RECHERCHE PERSONNALISÉE</span><h2>Les postes qui méritent votre attention.</h2><p>GRC, gouvernance cyber, RSSI/CISO et gouvernance IA — avec une forte pondération sur le pilotage et une exclusion des postes trop techniques.</p></div></section>
-<section class="panel">
-<div class="section-title"><h3>Mes critères</h3><span class="demo">Données de démonstration</span></div>
-<div class="filters">
-<label>Fonction<select id="role"><option value="all">Toutes</option><option value="grc">GRC / Gouvernance</option><option value="rssi">RSSI / CISO</option><option value="risk">Risk / Compliance</option><option value="ia">Gouvernance IA</option><option value="dpo">DPO / Privacy</option></select></label>
-<label>Zone<select id="zone"><option value="all">PACA + télétravail</option><option value="sophia">Sophia Antipolis</option><option value="toulon">Toulon / Ollioules</option><option value="aix">Aix / Marseille</option><option value="remote">Télétravail</option></select></label>
-<label>Contrat<select id="contract"><option value="all">CDI ou freelance</option><option value="cdi">CDI</option><option value="freelance">Freelance / portage</option></select></label>
-<label>TJM minimum<input id="tjm" type="number" value="650" step="25"></label>
-</div>
-<label class="switch"><input id="technical" type="checkbox" checked> Exclure les postes trop techniques</label>
-</section>
-<div class="summary"><div><strong id="resultCount">0</strong> offres retenues · <strong id="highCount">0</strong> très compatibles</div><select id="sort"><option value="score">Trier par pertinence</option><option value="date">Plus récentes</option><option value="pay">Rémunération</option></select></div>
-<section id="jobs"></section>
-<section class="panel methodology"><h3>Comment JobRadar calcule le score</h3><div class="method-grid"><div><b>Gouvernance / GRC</b><span>fortement pondéré</span></div><div><b>Seniorité</b><span>expérience et responsabilité</span></div><div><b>Localisation</b><span>PACA + remote</span></div><div><b>Technicité</b><span>pénalité forte si dominante</span></div></div></section>
-</main><footer>JobRadar Senior · Prototype personnel · Les offres affichées sont fictives.</footer>
-<script src="app.js"></script>
-</body></html>
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JobRadar Senior</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="topbar"><div><h1>JobRadar Senior</h1><p>Veille ciblée — cybersécurité, gouvernance, GRC & IA</p></div><span class="version">V4</span></header><main>
+<section class="panel"><h2>Profil de recherche</h2><div class="filters">
+<label>Localisation<select id="location"><option value="all">Toutes</option><option value="PACA">PACA</option><option value="Sophia Antipolis">Sophia Antipolis</option><option value="Aix-Marseille">Aix-Marseille</option><option value="Toulon">Toulon</option><option value="Remote">Télétravail / remote</option></select></label>
+<label>Contrat<select id="contract"><option value="all">Tous</option><option value="CDI">CDI</option><option value="Freelance / portage">Freelance / portage</option></select></label>
+<label>Fonction<select id="role"><option value="all">Toutes</option><option>GRC / gouvernance</option><option>RSSI / CISO</option><option>Risques / conformité</option><option>Gouvernance IA</option><option>DPO / Privacy</option></select></label>
+<label>Score minimum<input id="minScore" type="range" min="0" max="100" value="60"><output id="scoreValue">60</output></label></div>
+<div class="checks"><label><input id="excludeTechnical" type="checkbox" checked> Exclure les postes trop techniques</label><label><input id="seniorOnly" type="checkbox" checked> Senior / Manager / Responsable / Directeur</label><label><input id="showDemo" type="checkbox" checked> Afficher les offres de démonstration</label></div></section>
+<div class="toolbar"><strong><span id="count">0</span> offre(s) affichée(s)</strong><button id="refresh">Actualiser</button></div><section id="jobs" class="jobs"></section>
+<section class="panel info"><h2>À propos de cette version</h2><p><strong>Important :</strong> les annonces affichées sont fictives et servent uniquement à tester les filtres et le scoring. Aucune source d'offres réelles n'est connectée.</p><p>La prochaine étape sera de connecter une source/API autorisée. Les clés d'API ne doivent jamais être placées dans le JavaScript public.</p></section></main><script src="app.js"></script></body></html>
